@@ -16,4 +16,10 @@ router.get('/secret', checkConnected, (req, res, next) => {
   res.render('secret');
 });
 
+router.get('/profile', checkConnected, (req, res, next) => {
+  res.render('profile', {
+    user: req.user
+  });
+});
+
 module.exports = router;
